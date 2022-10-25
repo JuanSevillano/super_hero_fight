@@ -1,0 +1,237 @@
+html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: url('../img/fightBck.png') no-repeat fixed;
+    background-size: cover;
+    color: #FFFFFF;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    display: inherit;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#content>.login {
+    width: 300px;
+}
+
+#content>.login>input {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+#content>.login>button {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.imageContainer>.stats {
+    position: absolute;
+    text-align: right;
+    padding: 4px;
+    text-shadow: 0 0 4px #000000;
+    width: 100%;
+    background: linear-gradient(to bottom, #000000AA 33%, #00000066 66%, transparent 100%);
+}
+
+/**/
+button {
+    height: 30px;
+}
+
+#app {
+    height: 100%;
+}
+
+.App {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#startGame {
+    width: 300px;
+    margin: auto;
+}
+
+.fighter {
+    width: 250px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+#round {
+    margin-top: 50px;
+}
+
+#round.hide,
+#result.hide {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.rock,
+.paper,
+.scissors,
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.rock.show,
+.paper.show,
+.scissors.show,
+.spinner.show {
+    opacity: 1;
+}
+
+.fighter>* {
+    display: block;
+}
+
+.fighter>button {
+    width: 100%;
+    margin-bottom: 2px
+}
+
+.progressContainer {
+    position: relative;
+}
+
+.progressContainer>span {
+    position: absolute;
+    height: 24px;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 24px;
+    font-size: 15px;
+}
+
+progress {
+    font-size: .6em;
+    line-height: 1.5em;
+    text-indent: .5em;
+    width: 100%;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #222222;
+}
+
+#heroContent .life::-webkit-progress-value {
+    background: #008800;
+}
+
+#enemy .life::-webkit-progress-value {
+    background: #CC0000;
+}
+
+progress::-webkit-progress-bar {
+    background: #444444;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal a {
+    font-size: initial;
+    color: #CC0000;
+    text-decoration: none;
+}
+
+#actions {
+    width: 100%;
+}
+
+#actions ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+#actions ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 20px black);
+    transition: all ease-in-out 10ms;
+}
+
+#actions ul li.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#actions ul li:hover {
+    filter: drop-shadow(2px 4px 6px transparent);
+}
+
+#actions ul li img {
+    width: 100px;
+    height: 100px;
+    width: 100%;
+}
